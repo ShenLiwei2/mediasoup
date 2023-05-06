@@ -12,7 +12,9 @@
 // Avoid uv/win.h: error C2628 'intptr_t' followed by 'int' is illegal.
 #if !defined(_SSIZE_T_) && !defined(_SSIZE_T_DEFINED)
 #include <BaseTsd.h>
+#ifndef ssize_t
 typedef SSIZE_T ssize_t;
+#endif
 #define SSIZE_MAX INTPTR_MAX
 #define _SSIZE_T_
 #define _SSIZE_T_DEFINED
